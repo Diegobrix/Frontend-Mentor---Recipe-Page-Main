@@ -155,3 +155,18 @@ h2 {
 }
 
 /* Desktop 1440px */
+@media screen and (width >= 1440px) {
+   main {
+      --radius: 30px;
+
+      margin: 5% 28%;
+      padding: 2rem;
+      border-radius: var(--radius);
+   }
+
+   figure {
+      border-radius: calc(var(--radius) / 2);
+      overflow: hidden;
+   }
+   
+}
