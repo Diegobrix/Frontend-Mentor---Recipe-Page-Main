@@ -67,7 +67,19 @@ body {
 }
 
 main {
+   --radius: 0;
+   --margin: 0;
+   --padding: 0;
+
+   margin: var(--margin);
+   padding: var(--padding);
+   border-radius: var(--radius);
    background-color: var(--neutral-100);
+}
+
+figure {
+   border-radius: calc(var(--radius) / 2);
+   overflow: hidden;
 }
 
 section:not(.prep_time-advice) {
@@ -154,19 +166,16 @@ h2 {
    width: calc(100% - 2rem);
 }
 
-/* Desktop 1440px */
+@media screen and (width >= 720px) {
+   main {
+      --padding: 2rem;
+      --radius: 30px;
+      --margin: 5% 15%;
+   }
+}
+
 @media screen and (width >= 1440px) {
    main {
-      --radius: 30px;
-
-      margin: 5% 28%;
-      padding: 2rem;
-      border-radius: var(--radius);
+      --margin: 5% 28%;
    }
-
-   figure {
-      border-radius: calc(var(--radius) / 2);
-      overflow: hidden;
-   }
-   
 }
