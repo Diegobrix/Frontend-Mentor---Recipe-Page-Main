@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+:root {
+   /* Primary Colours */
+   --primary-100: hsl(14, 45%, 36%);
+   --primary-200: hsl(332, 51%, 32%);
+
+   /* Neutral Colours */
+   --neutral-100: hsl(0, 0%, 100%);
+   --neutral-200: hsl(330, 100%, 98%);
+   --neutral-300: hsl(30, 54%, 90%);
+   --neutral-400: hsl(30, 18%, 87%);
+   --neutral-500: hsl(30, 10%, 34%);
+   --neutral-600: hsl(24, 5%, 18%);
+
+   --ff-100: 'Young Serif';
+   --ff-200: 'Outfit';
+
+   /* Font Weights */
+   --fw-100: 400;
+   --fw-200: 600;
+   --fw-300: 700;
+
+   font-size: 16px;
+   font-family: var(--ff-200);
+   font-weight: 400;
+}
+
+figure,
+figure img,
+h1,
+h2, 
+h3,
+section,
+div,
+hr {
+   margin: 0;
+}
+
+figure img {
+   width: 100%;
+   height: 100%;
+   background-size: contain;
+}
+
+h1,
+h2 {
+   font-weight: var(--fw-100);
+   font-family: var(--ff-100);
+}
+
+* {
+   box-sizing: inherit;
+   color: var(--neutral-500);
+}
+
+body {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+
+   min-height: 100vh;
+   min-height: 100dvh;
+
+   background-color: var(--neutral-400);
+}
+
+main {
+   background-color: var(--neutral-100);
+}
+
+section:not(.prep_time-advice) {
+   padding-inline: 2rem;
+}
+
+hr {
+   width: calc(100% - 4rem);
+   height: 2px;
+   margin: auto;
+   margin-block: 2rem;
+   border: 0;
+   background: var(--neutral-400);
+}
+
+h1 {
+   font-size: 3rem;
+   color: var(--neutral-600);
+   margin-top: 2rem;
+}
+
+p {
+   font-size: 1.2em;
+}
+
+.prep_time-advice {
+   border-radius: 10px;
+   padding: 2rem;
+   margin-bottom: 2rem;
+   background: var(--neutral-200);
+}
+
+.prep_time-advice h3 {
+   font-size: 1.5rem;
+   font-weight: var(--fw-300);
+   color: var(--primary-200);
+}
+
+.prep_time-advice ul :nth-child(2) {
+   margin-block: 1rem;
+}
+
+li {
+   width: 90%;
+   font-size: 1.2rem;
+   padding-left: 1.5rem;
+   margin-bottom: 1rem;
+}
+
+li::marker {
+   color: var(--marker-colour);
+   font-weight: var(--fw-300);
+}
+
+h2 {
+   font-size: 2rem;
+   color: var(--primary-100);
+}
+
+.nutrition_fact {
+   display: grid;
+   grid-auto-flow: column;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 0 1rem;
+   margin: 0 auto;
+
+   width: 70%;
+}
+
+.nutrition_fact span {
+   font-size: 1.2rem;
+}
+
+.nutrition_fact span:last-child {
+   color: var(--primary-100);
+   font-weight: var(--fw-300);
+}
+
+.nutrition-wrapper {
+   padding-bottom: 3rem;
+}
+
+.nutrition-wrapper hr {
+   width: calc(100% - 2rem);
+}
+
+/* Desktop 1440px */
